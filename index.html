@@ -16,7 +16,7 @@
 </main></div>
 <div id="modal" class="modal"><div class="modalbox"><div class="topbar"><h3 id="modalTitle"></h3><button class="secondary" onclick="closeModal()">Close</button></div><div id="modalBody"></div></div></div>
 <script>
-const API_URL='PASTE_APPS_SCRIPT_WEB_APP_EXEC_URL';
+const API_URL='https://script.google.com/macros/s/AKfycbwTtXpc6_wJpi4sDoGc1smDZ47JJwZlPx-n-drkkSFR9CIHuZ1cDhhaGRfLjs5WJJIX/exec';
 const state={user:JSON.parse(localStorage.getItem('iumUser')||'null'),token:localStorage.getItem('iumToken')||'',users:[],courses:[]};
 const $=id=>document.getElementById(id);
 function showView(id){document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));$(id).classList.add('active');document.querySelectorAll('.nav[data-view]').forEach(n=>n.classList.toggle('active',n.dataset.view===id));if(id==='myCourses')loadMyCourses();if(id==='progress')loadProgress();if(id==='profile')loadProfile();if(id==='admin')loadAdmin();}
